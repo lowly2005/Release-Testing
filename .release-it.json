@@ -1,5 +1,23 @@
 {
     "src": {
-        "tagName": "v%s"
-    }
+        "tagName": "v%s",
+        "commit": true,
+        "commitMessage": "Release v%s",
+        "commitArgs": "",
+        "tag": true,
+        "tagAnnotation": "Release v%s",
+        "push": true,
+        "pushArgs": "",
+        "addUntrackedFiles": false,
+        "afterReleaseCommand": "echo Successfully released ${version} to ${dist.repo}."
+    },
+    "github": {
+        "release": true,
+        "releaseName": "Release v%s",
+        "tokenRef": "GITHUB_TOKEN",
+        "assets": "dist/*.zip"
+    },
+    "repo": {
+        "owner": "Loubna"
+    }  
 }
