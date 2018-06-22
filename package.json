@@ -1,12 +1,13 @@
 {
   "name": "Release-Testing",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server -d",
     "build": "cross-env NODE_ENV=production webpack -p",
-    "test": "jest"
+    "test": "jest",
+    "release": "release-it minor"
   },
   "keywords": [],
   "author": "",
@@ -55,6 +56,7 @@
     "jest": "^22.4.4",
     "node-sass": "^4.9.0",
     "react-hot-loader": "^4.3.3",
+    "release-it": "^7.4.7",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "url-loader": "^0.6.2",
