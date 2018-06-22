@@ -15,7 +15,7 @@
     "github": {
         "release": true,
         "releaseName": "Release v%s",
-        "tokenRef": "97e0bedf8fb787ffe7548feb888380b3c2d69676",
+        "tokenRef": "GITHUB_TOKEN",
         "assets": "dist/*.zip"
     },
     "repo": {
