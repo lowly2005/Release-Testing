@@ -1,8 +1,5 @@
 {
     "src": {
         "tagName": "v%s"
-    },
-    "github": {
-        "release": true
     }
 }
