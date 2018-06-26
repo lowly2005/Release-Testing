@@ -1,6 +1,6 @@
 {
   "name": "Release-Testing",
-  "version": "1.0.0-snapshot.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
