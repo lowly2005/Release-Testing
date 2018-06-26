@@ -1,4 +1,6 @@
 {
+    "requireCleanWorkingDir": true,
+    "requireUpstream": true,
     "src": {
         "tagName": "v%s",
         "commit": true,
@@ -9,8 +11,7 @@
         "push": true,
         "pushArgs": "",
         "addUntrackedFiles": false,
-        "afterReleaseCommand": "echo Successfully released ${version} to ${dist.repo}.",
-        "requireCleanWorkingDir": true
+        "afterReleaseCommand": "echo Successfully released ${version} to ${dist.repo}."
     },
     "github": {
         "release": true,
