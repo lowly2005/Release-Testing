@@ -2,6 +2,9 @@
     "requireCleanWorkingDir": true,
     "requireUpstream": true,
     "increment": "conventional:angular",
+    "beforeChangelogCommand": false,
+    "safeBump": true,
+    "changelogCommand": "git log --pretty=format:\"* %s (%h)\" [REV_RANGE]",
     "npm": {
         "private": true
     },
