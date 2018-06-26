@@ -1,6 +1,9 @@
 {
     "requireCleanWorkingDir": true,
     "requireUpstream": true,
+    "npm": {
+        "private": true
+    },
     "src": {
         "tagName": "v%s",
         "commit": true,
@@ -17,7 +20,10 @@
         "release": true,
         "releaseName": "Release v%s",
         "tokenRef": "GITHUB_TOKEN",
-        "assets": "dist/*.zip"
+        "assets": [
+            "build.zip",
+            "build.tar.gz"
+        ]
     },
     "repo": {
         "owner": "Loubna"
