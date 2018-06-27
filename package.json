@@ -11,7 +11,32 @@
   },
   "release": {
     "branch": "master",
-    "analyzeCommits": "@semantic-release/commit-analyzer",
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {
+          "type": "docs",
+          "scope": "README",
+          "release": "patch"
+        },
+        {
+          "type": "refactor",
+          "release": "patch"
+        },
+        {
+          "type": "yolo",
+          "release": "patch"
+        }
+      ],
+      "parserOpts": {
+        "noteKeywords": [
+          "BREAKING CHANGE",
+          "BREAKING CHANGES",
+          "BREAKING"
+        ]
+      }
+    },
+    //"@semantic-release/commit-analyzer",
     "verifyRelease": [],
     "generateNotes": "@semantic-release/release-notes-generator",
     "prepare": [],
