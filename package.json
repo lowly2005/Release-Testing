@@ -14,7 +14,7 @@
     "analyzeCommits": {
       "releaseRules": [
         {
-          "type": "yolo",
+          "type": "newFeature",
           "release": "minor"
         }
       ],
