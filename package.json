@@ -12,22 +12,12 @@
   "release": {
     "branch": "master",
     "analyzeCommits": {
-      "releaseRules": [
-        {
-          "type": "newFeature",
-          "release": "minor"
-        }
-      ],
-      "parserOpts": {
-        "noteKeywords": [
-          "BREAKING CHANGE",
-          "BREAKING CHANGES",
-          "BREAKING"
-        ]
-      }
+     "preset": "eslint"
     },
     "verifyRelease": [],
-    "generateNotes": "@semantic-release/release-notes-generator",
+    "generateNotes": {
+      "preset": "eslint"
+    },
     "prepare": [],
     "publish": "@semantic-release/github",
     "success": "@semantic-release/github",
