@@ -14,17 +14,8 @@
     "analyzeCommits": {
       "releaseRules": [
         {
-          "type": "docs",
-          "scope": "README",
-          "release": "patch"
-        },
-        {
-          "type": "refactor",
-          "release": "patch"
-        },
-        {
           "type": "yolo",
-          "release": "patch"
+          "release": "minor"
         }
       ],
       "parserOpts": {
