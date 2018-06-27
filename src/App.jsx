@@ -15,10 +15,10 @@ const App = () => (
       </div>
       <ul className="left">
         <li>
-          <Link to="/">Home branch_3</Link>
+          <Link to="/">Home new branch_3</Link>
         </li>
         <li>
-          <Link to="/about">About branch_3</Link>
+          <Link to="/about">About new branch_3</Link>
         </li>
       </ul>
       <Routes />
