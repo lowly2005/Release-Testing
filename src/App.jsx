@@ -11,14 +11,14 @@ const App = () => (
       <div>
         <h1>hello world!</h1>
         <img className="container__image" alt="react logo" src={reactLogo} />
-        <p>If you see this everything is working! breacking change</p>
+        <p>If you see this everything is working! new feature</p>
       </div>
       <ul className="left">
         <li>
-          <Link to="/">Home branch_3</Link>
+          <Link to="/">Home new branch_3</Link>
         </li>
         <li>
-          <Link to="/about">About branch_3</Link>
+          <Link to="/about">About new branch_3</Link>
         </li>
       </ul>
       <Routes />
