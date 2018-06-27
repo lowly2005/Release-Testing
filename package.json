@@ -12,7 +12,6 @@
   "release": {
     "branch": "master",
     "analyzeCommits": {
-      "preset": "angular",
       "releaseRules": [
         {
           "type": "docs",
