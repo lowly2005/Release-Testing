@@ -1,14 +1,23 @@
 {
   "name": "Release-Testing",
-  "version": "2.1.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server -d",
     "build": "cross-env NODE_ENV=production webpack -p",
     "test": "jest",
-    "release": "release-it minor",
-    "release-unstable": "release-it minor --preRelease=rc"
+    "semantic-release": "semantic-release"
+  },
+  "release": {
+    "branch": "master",
+    "analyzeCommits": "@semantic-release/commit-analyzer",
+    "verifyRelease": [],
+    "generateNotes": "@semantic-release/release-notes-generator",
+    "prepare": [],
+    "publish": "@semantic-release/github",
+    "success": "@semantic-release/github",
+    "fail": "@semantic-release/github"
   },
   "keywords": [],
   "author": "",
@@ -57,8 +66,8 @@
     "jest": "^22.4.4",
     "node-sass": "^4.9.0",
     "react-hot-loader": "^4.3.3",
-    "release-it": "^7.4.7",
     "sass-loader": "^6.0.7",
+    "semantic-release": "^15.6.0",
     "style-loader": "^0.20.3",
     "url-loader": "^0.6.2",
     "webpack": "^4.12.0",
@@ -66,9 +75,16 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "@semantic-release/github": "^4.2.17",
+    "@semantic-release/release-notes-generator": "^6.0.12",
+    "last-release-git": "^0.0.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lowly2005/Release-Testing.git"
   }
 }

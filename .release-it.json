@@ -33,3 +33,6 @@
         "owner": "Loubna"
     }  
 }
+
+    // "release": "release-it minor",
+    // "release-unstable": "release-it minor --preRelease=rc"
