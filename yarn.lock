@@ -122,7 +122,7 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@semantic-release/commit-analyzer@^5.0.0":
+"@semantic-release/commit-analyzer@^5.0.0", "@semantic-release/commit-analyzer@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@semantic-release/commit-analyzer/-/commit-analyzer-5.0.5.tgz#e855acaab9a850b97ac4260fec8c6df36c0edc45"
   dependencies:

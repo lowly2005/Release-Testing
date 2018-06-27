@@ -36,7 +36,6 @@
         ]
       }
     },
-    //"@semantic-release/commit-analyzer",
     "verifyRelease": [],
     "generateNotes": "@semantic-release/release-notes-generator",
     "prepare": [],
@@ -100,6 +99,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "@semantic-release/commit-analyzer": "^5.0.5",
     "@semantic-release/github": "^4.2.17",
     "@semantic-release/release-notes-generator": "^6.0.12",
     "last-release-git": "^0.0.3",
