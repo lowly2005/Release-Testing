@@ -15,7 +15,7 @@ const App = () => (
       </div>
       <ul className="left">
         <li>
-          <Link to="/">Home branch test bug</Link>
+          <Link to="/">Home branch test guu</Link>
         </li>
         <li>
           <Link to="/about">About branch_b</Link>
