@@ -11,14 +11,10 @@
   },
   "release": {
     "branch": "master",
-    "analyzeCommits": {
-     "preset": "eslint"
-    },
-    "verifyRelease": [],
-    "generateNotes": {
-      "preset": "eslint"
-    },
-    "prepare": [],
+    "analyzeCommits": "@semantic-release/commit-analyzer",
+    "verifyRelease": "cracks",
+    "generateNotes": "@semantic-release/release-notes-generator",
+    "prepare": "@semantic-release/npm",
     "publish": "@semantic-release/github",
     "success": "@semantic-release/github",
     "fail": "@semantic-release/github"
