@@ -25,8 +25,7 @@ jobs:
             docker build -t quay.io/lowly2005/release-testing:$CIRCLE_BRANCH .
             if ["${CIRCLE_BRANCH}" == "master" && "${CIRCLE_TAG}" !== ""]; then
               echo "Building docker image for tag $CIRCLE_TAG"
-              docker --build-arg git_tag=$(git describe --tags) tag quay.io/lowly2005/$CIRCLE_PROJECT_REPONAME:$CIRCLE_TAG \
-                quay.io/lowly2005/$CIRCLE_PROJECT_REPONAME:master 
+              docker --build-arg git_tag=$(git describe --tags) tag quay.io/lowly2005/$CIRCLE_PROJECT_REPONAME:$CIRCLE_TAG
             fi
       - deploy:
           name: Push Docker image
