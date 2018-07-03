@@ -22,12 +22,12 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            # if ["${CIRCLE_TAG}" !== ""]; then
+            if ["${CIRCLE_TAG}" !== ""]; then
               docker --build-arg git_tag=$(git describe --tags) tag quay.io/lowly2005/$CIRCLE_PROJECT_REPONAME:$CIRCLE_TAG \
                 quay.io/datalogue/$CIRCLE_PROJECT_REPONAME:master
-            # else
-            #   docker build --build-arg git_tag=$(git describe --tags) -t quay.io/lowly2005/release-testing:$CIRCLE_BRANCH .
-            # fi
+            else
+              docker build --build-arg git_tag=$(git describe --tags) -t quay.io/lowly2005/release-testing:$CIRCLE_BRANCH .
+            fi
       - deploy:
           name: Push Docker image
           command: |
