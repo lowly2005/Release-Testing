@@ -24,7 +24,7 @@ jobs:
           command: |
             if ["${CIRCLE_TAG}" !== ""]; then
               echo "Building docker image for tag $CIRCLE_TAG"
-              docker build -t quay.io/lowly2005/release-testing:$CIRCLE_TAG .
+              docker build -t quay.io/lowly2005/release-testing:blabla.
             else
               docker build -t quay.io/lowly2005/release-testing:$CIRCLE_BRANCH .
             fi
