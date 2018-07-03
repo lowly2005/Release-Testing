@@ -11,3 +11,21 @@ jobs:
       - run:
           name: release
           command: npm run semantic-release || true
+  docker-build:
+    docker:
+      - image: docker
+    steps:
+      - attach_workspace:
+          at: ./
+      - setup_remote_docker:
+          reusable: true
+      - run:
+          name: Build Docker image
+          command: |
+            echo "Building docker image for tag $CIRCLE_TAG"
+            docker build --build-arg git_tag=$(git describe --tags) -t quay.io/lowly2005/release-testing:${CIRCLE_TAG} .
+      - deploy:
+          name: Push Docker image
+          command: |
+            echo $QUAY_PASS | docker login -u $QUAY_USER --password-stdin quay.io
+            docker push quay.io/lowly2005/release-testing:$CIRCLE_TAG
