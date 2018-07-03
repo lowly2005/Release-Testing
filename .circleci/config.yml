@@ -9,11 +9,11 @@ jobs:
           name: install
           command: npm install
       - run:
-          name: Reverie Version
-          command: echo "Building docker image for tag $CIRCLE_TAG"
-      - run:
           name: release
           command: npm run semantic-release || true
+      - run:
+          name: Reverie Version
+          command: echo "Building docker image for tag $CIRCLE_TAG"
   docker-build:
     docker:
       - image: docker
