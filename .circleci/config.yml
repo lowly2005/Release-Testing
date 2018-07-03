@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            docker build -t quay.io/lowly2005/release-testing:$CIRCLE_TAG .
+            docker build --build-arg git_tag=$(git describe --tags) -t quay.io/lowly2005/release-testing:$CIRCLE_TAG .
       - deploy:
           name: Push Docker image
           command: |
